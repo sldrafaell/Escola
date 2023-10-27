@@ -4,7 +4,7 @@ Class Conta {
     private $nome;
     private $saldo;
 
-    function __construct($numero, $nome, $saldo) {
+    function __construct(float $numero, string $nome, float $saldo) {
         $this->definirNumero($numero);
         $this->definirNome($nome);
         $this->definirSaldo($saldo);
@@ -14,19 +14,19 @@ Class Conta {
         $this->numero = $numero;
     }
     public function retornarNumero() {
-        return $this->numero.PHP_EOL;
+        return $this->numero;
     }
     public function definirNome($nome) {
         $this->nome = $nome;
     }
     public function retornarNome() {
-        return $this->nome.PHP_EOL;
+        return $this->nome;
     }
     public function definirSaldo($saldo) {
         $this->saldo = $saldo;
     }
     public function retornarSaldo() {
-        return $this->saldo.PHP_EOL;
+        return $this->saldo;
     }
 
     public function retornarConta() {

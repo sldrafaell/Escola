@@ -3,7 +3,7 @@ class Cliente extends Conta {
     private $idade;
     private $endereco;
     
-    public function __construct(float $numero,float $saldo, string $nome, int $idade, string $endereco) {
+    public function __construct(string $numero,float $saldo, string $nome, int $idade, string $endereco) {
         parent::__construct($numero, $nome, $saldo);
         $this->setIdade($idade);
         $this->setEndereco($endereco);

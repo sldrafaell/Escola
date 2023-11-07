@@ -1,25 +1,31 @@
 <?php
-class Cliente extends Conta {
-    private $idade;
-    private $endereco;
+class Cliente {
+    private int $idade;
+    private string $endereco;
+    private Conta $conta;
     
-    public function __construct(string $numero,float $saldo, string $nome, int $idade, string $endereco) {
-        parent::__construct($numero, $nome, $saldo);
+    public function __construct($idade, $endereco, $conta) {
         $this->setIdade($idade);
         $this->setEndereco($endereco);
+        $this->setConta($conta);
     }
+   public function setIdade(int $idade) {
+    $this->idade = $idade;
+   }
+   public function setEndereco(string $endereco) {
+    $this->endereco = $endereco;
+   }
+   public function setConta(Conta $conta) {
+    $this->conta = $conta;
+   }
+   public function getIdade() {
+    return $this->idade;
+   }
+   public function getEndereco() {
+    return $this->endereco;
+   }
+   public function getConta() {
+    return $this->conta;
+   }
 
-    public function setIdade($idade) {
-        $this->idade = $idade;
-    }
-    public function getIdade() {
-        return $this->idade;
-    }
-    public function setEndereco($endereco) {
-        $this->endereco = $endereco;
-    }
-    public function getEndereco() {
-        return $this->endereco;
-    }
-    
 }

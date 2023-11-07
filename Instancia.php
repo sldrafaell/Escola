@@ -2,8 +2,7 @@
 require "Conta.php";
 require "Cliente.php";
 
-$cliente = new Cliente( "123445", 100.00, "Rafael", 17, "Rua PHP");
+$conta = new Conta ("3478", "Rafel", 24.89);
+$cliente = new Cliente (17, "RUA MARCO POLO", $conta);
 
-echo $cliente->getEndereco().PHP_EOL;
-echo $cliente->getIdade().PHP_EOL;
-echo $cliente->retornarNumero();
+var_dump($cliente->getConta()->retornarNumero());
